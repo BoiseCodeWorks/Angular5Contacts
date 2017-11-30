@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h1>{{ title }}</h1>
+<div class="row">
+	<div class="col-xs-4">
+		<app-contact-list (onSelect)="setView($event)" (onEdit)="setEdit($event)"></app-contact-list>
+	</div>
+	<div class="col-xs-8">
+		<app-contact *ngIf="contact && mode=='view'" [contact]="contact"></app-contact>
+		<app-contact-form *ngIf="contact && mode=='edit'" [contact]="contact"></app-contact-form>
+	</div>
+</div>

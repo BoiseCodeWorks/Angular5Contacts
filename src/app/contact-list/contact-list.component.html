@@ -1,0 +1,13 @@
+<div>
+	<div class="row" *ngFor="let contact of contacts">
+		<div class="col-xs-4">
+			<img [src]="contact.photoUrl" alt="">
+		</div>
+		<div class="col-xs-8">
+			<button type="button" class="btn btn-link" (click)="select(contact)">{{ contact.firstName }} {{ contact.lastName }}</button>&nbsp;
+			<button type="button" class="btn btn-primary btn-sm" (click)="edit(contact)">
+				<i class="fa fa-pencil"></i>
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="media">
+	<div class="media-left media-middle">
+		<a href="#">
+			<img class="media-object" [src]="contact.photoUrl" [alt]="contact.firstName + ' ' + contact.lastName">
+		</a>
+	</div>
+	<div class="media-body">
+		<h4 class="media-heading">{{ contact.firstName }} {{ contact.lastName }}</h4>
+		<address>
+			<br> {{ contact.address1 }}
+			<br> {{ contact.city }}, {{ contact.state }} {{ contact.zipCode }}
+			<br>
+			<strong>Phone:</strong> {{ contact.phoneNumber }}
+		</address>
+	</div>
+</div>
